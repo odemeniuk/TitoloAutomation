@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170514 22:05:09.452" generator="Robot 3.0.1 (Python 2.7.11 on darwin)">
+<suite source="/Users/Air1/ENV/TitoloAutomation/Tests/HomePageTest.robot" id="s1" name="HomePageTest">
+<kw type="setup" name="Website Setup" library="HomePageKeywords">
+<kw name="Navigate To The Website" library="HomePageKeywords">
+<arguments>
+<arg>${WebSite}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${WebSite}</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20170514 22:05:09.581" level="INFO">Opening browser 'gc' to base url 'https://en.titolo.ch/'</msg>
+<status status="PASS" endtime="20170514 22:05:15.286" starttime="20170514 22:05:09.581"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Your browser is Chrome</arg>
+<arg>WARN</arg>
+</arguments>
+<msg timestamp="20170514 22:05:15.287" level="WARN">Your browser is Chrome</msg>
+<status status="PASS" endtime="20170514 22:05:15.287" starttime="20170514 22:05:15.287"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170514 22:05:15.462" starttime="20170514 22:05:15.287"></status>
+</kw>
+<status status="PASS" endtime="20170514 22:05:15.462" starttime="20170514 22:05:09.581"></status>
+</kw>
+<kw name="Log In" library="AccountKeywords">
+<arguments>
+<arg>${Email}</arg>
+<arg>${Password}</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${SignIn}</arg>
+</arguments>
+<msg timestamp="20170514 22:05:15.463" level="INFO">Clicking link 'Sign in'.</msg>
+<status status="PASS" endtime="20170514 22:05:16.563" starttime="20170514 22:05:15.463"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${LoginMsg}</arg>
+</arguments>
+<msg timestamp="20170514 22:05:16.596" level="INFO">Current page contains text 'Login or Create an Account'.</msg>
+<status status="PASS" endtime="20170514 22:05:16.596" starttime="20170514 22:05:16.563"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SignInEmail}</arg>
+<arg>${Email}</arg>
+</arguments>
+<msg timestamp="20170514 22:05:16.597" level="INFO">Typing text 'demeniuk@gmail.com' into text field 'id=email'</msg>
+<status status="PASS" endtime="20170514 22:05:16.755" starttime="20170514 22:05:16.596"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SignInPass}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20170514 22:05:16.756" level="INFO">Typing password into text field 'id=pass'</msg>
+<status status="PASS" endtime="20170514 22:05:16.884" starttime="20170514 22:05:16.756"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${LoginButton}</arg>
+</arguments>
+<msg timestamp="20170514 22:05:16.885" level="INFO">Clicking button 'id=send2'.</msg>
+<status status="PASS" endtime="20170514 22:05:17.960" starttime="20170514 22:05:16.885"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${AccountDashboard}</arg>
+</arguments>
+<msg timestamp="20170514 22:05:17.987" level="INFO">Current page contains text 'Account Dashboard'.</msg>
+<status status="PASS" endtime="20170514 22:05:17.987" starttime="20170514 22:05:17.960"></status>
+</kw>
+<kw name="Click Image" library="Selenium2Library">
+<doc>Clicks an image found by `locator`.</doc>
+<arguments>
+<arg>${TitoloLogo}</arg>
+</arguments>
+<msg timestamp="20170514 22:05:17.988" level="INFO">Clicking image 'https://en.titolo.ch/skin/frontend/waterlee-boilerplate/newtitolo/images/logo.gif'.</msg>
+<status status="PASS" endtime="20170514 22:05:21.121" starttime="20170514 22:05:17.988"></status>
+</kw>
+<status status="PASS" endtime="20170514 22:05:21.121" starttime="20170514 22:05:15.462"></status>
+</kw>
+<status status="PASS" endtime="20170514 22:05:21.121" starttime="20170514 22:05:09.580"></status>
+</kw>
+<test id="s1-t1" name="Verify user can search">
+<kw name="Search For" library="HeaderKeywords">
+<arguments>
+<arg>Jordan</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SearchField}</arg>
+<arg>${SearchInput}</arg>
+</arguments>
+<msg timestamp="20170514 22:05:21.125" level="INFO">Typing text 'Jordan' into text field 'id=search'</msg>
+<status status="PASS" endtime="20170514 22:05:21.271" starttime="20170514 22:05:21.124"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SearchSubmit}</arg>
+</arguments>
+<msg timestamp="20170514 22:05:21.272" level="INFO">Clicking element 'css=.icon-search'.</msg>
+<status status="PASS" endtime="20170514 22:05:23.201" starttime="20170514 22:05:21.271"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${SearchResult}</arg>
+</arguments>
+<msg timestamp="20170514 22:05:23.230" level="INFO">Current page contains text 'Search results for'.</msg>
+<status status="PASS" endtime="20170514 22:05:23.231" starttime="20170514 22:05:23.201"></status>
+</kw>
+<status status="PASS" endtime="20170514 22:05:23.231" starttime="20170514 22:05:21.123"></status>
+</kw>
+<status status="PASS" endtime="20170514 22:05:23.231" critical="yes" starttime="20170514 22:05:21.122"></status>
+</test>
+<doc>Testing Sneakershop Website</doc>
+<status status="PASS" endtime="20170514 22:05:23.232" starttime="20170514 22:05:09.462"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="HomePageTest" pass="1">HomePageTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20170514 22:05:15.287" level="WARN">Your browser is Chrome</msg>
+</errors>
+</robot>
