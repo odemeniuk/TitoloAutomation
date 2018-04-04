@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Keywords for Header
-Library  Selenium2Library
+Library          Selenium2Library
 
 
 *** Variables ***

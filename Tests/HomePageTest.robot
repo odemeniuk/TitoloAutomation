@@ -2,36 +2,31 @@
 Documentation    Testing Sneakershop Website
 
 Suite Setup      Website Setup
-#Suite Teardown   Website TearDown
-
-
-
-
+Suite Teardown   Website TearDown
 
 
 *** Test Cases ***
+
 Verify user can search
-    Search For  Jordan
+    Search For  Adidas
+\    Log    Get Current Date  WARN
+
+
+Verify use can change currency to USD
+    Change Currency To USD
+    
 
 
 
-
-
-
-
-
-#Verify user can navigate to New Arrivals Pape
-#    [Tags]    test
-#    Go to New Arrivals Page     ${newarrivalslink}
-
-
-#Verify use can change currency to USD
-#    Change Currency To USD
-
-
+Verify user can navigate to New Arrivals Pape
+    [Tags]    test
+    Go to New Arrivals Page
+    
+    
+    
+    
 
 *** Settings ***
-
-
-Resource  /Users/Air1/ENV/TitoloAutomation/Keywords/HomePage/HomePageKeywords.txt
-Resource  /Users/Air1/ENV/TitoloAutomation/Keywords/Header/HeaderKeywords.txt
+Resource                  ../Keywords/AccountPage/AccountKeywords.robot
+Resource                  ../Keywords/Header/HeaderKeywords.robot
+Resource                  ../Keywords/HomePage/HomePageKeywords.robot

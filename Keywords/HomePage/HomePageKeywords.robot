@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Keywords for Homepage Navigation
-Library  Selenium2Library
-Resource  /Users/Air1/ENV/TitoloAutomation/Keywords/AccountPage/AccountKeywords.txt
+Library     Selenium2Library
+Resource                  ../AccountPage/AccountKeywords.robot
 
 
 

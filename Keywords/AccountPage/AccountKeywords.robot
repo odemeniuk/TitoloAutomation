@@ -1,9 +1,9 @@
 *** Settings ***
-Documentation    Keywords for Account
-Library  Selenium2Library
-
-
-
+Documentation   Keywords for Account
+Library         Selenium2Library
+Library         DateTime
+Library         Collections
+ 
 
 *** Variables ***
 
@@ -56,7 +56,8 @@ Log In
     input password          ${SignInPass}    ${Password}
     click button            ${LoginButton}
     Page should contain     ${AccountDashboard}
-    click image             ${TitoloLogo}
+    Click image             ${TitoloLogo}
+    
 
 
 
@@ -75,7 +76,7 @@ Forgot Password
     Click button                    ${Submit}
     Page should contain element     ${ForgotConfMsgLoc}
     Click image                     ${TitoloLogo}
-
+           
 
 
 
